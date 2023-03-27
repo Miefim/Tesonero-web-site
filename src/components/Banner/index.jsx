@@ -35,7 +35,7 @@ const Banner = () => {
                </div>
                <div className={`${style.card} ${style.card_bottom}`}>
                   <img src="/images/bannerIcon2.svg" alt="" />
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                </div>
             </div>
          </div>
