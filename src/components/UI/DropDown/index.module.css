@@ -1,0 +1,50 @@
+.dd {
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   border-bottom: 1px solid #E7EBF0;
+   min-height: 70px;
+}
+
+.ddArrow {
+   position: absolute;
+   right: 18px;
+   top: 30px;
+   transition: .3s;
+}
+
+.ddHeader {
+   display: flex;
+   align-items: center;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 28.13px;
+   height: 70px;
+   transition: .3s;
+   z-index: 10;
+}
+
+.ddBody {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 18.75px;
+   width: 80%;
+   margin: -10px 0 16px 64px;
+   transition: .3s;
+   height: 0;
+   overflow: hidden;
+}
+
+.visible {
+   height: auto;
+   margin-top: 0;
+}
+
+.rotate180 {
+   transform: rotate(180deg);
+}
+
+.green {
+   color: #00C368;
+}
