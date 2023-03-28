@@ -9,7 +9,7 @@ const Banner = ({className}) => {
       window.addEventListener('scroll', parallaxCalc)
    })
 
-   const parallaxCalc = () => {
+   const parallaxCalc = () => { 
       setParallax(window.scrollY/7)
    }
 
