@@ -1,0 +1,17 @@
+.button {
+   box-sizing: border-box;
+   width: 117px;
+   height: 32px;
+   color: #A6ABBD;
+   background-color: #fff;
+   border: none;
+   cursor: pointer;
+   transition: .3s;
+   border-radius: 8px;
+}
+
+.button:hover {
+   background-color: #00C368;
+   box-shadow: 0 8px 16px 0 #00C36840;
+   color: #fff;
+}

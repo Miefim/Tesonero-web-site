@@ -1,0 +1,51 @@
+.header {
+   width: 100%;
+   display: flex;
+   position: relative;
+}
+
+.logo {
+   display: flex;
+   font-weight: 700;
+   font-style: italic;
+   font-size: 50px;
+   color: #A6ABBD;
+   margin: 42px 0px 43px 87px;
+}
+
+.logo_left {
+   display: flex;
+   align-items: center;
+   height: 75px;
+   width: 222px;
+
+}
+
+.logo_right {
+   display: flex;
+   position: relative;
+   margin-left: 22.57px;
+}
+
+.logo_icon {
+   position: absolute;
+   left: -14px;
+   top: -12px;
+}
+
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: 90.36px;
+   width: 400px;
+}
+
+.headerBtn {
+   position: absolute;
+   background-color: #00C368;
+   box-shadow: 0 8px 16px 0 #00C36840;
+   color: #fff;
+   top: 40%;
+   right: 84px;
+}

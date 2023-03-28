@@ -1,0 +1,83 @@
+.blog {
+   box-sizing: border-box;
+   min-height: 829px;
+   width: 50%;
+   background-color: #F5F5F5;
+   padding: 101px 73px 40px 73px;
+}
+
+.line {
+   margin: 0px auto 18px auto;
+}
+
+.title {
+   display: flex;
+   justify-content: center;
+   font-weight: 700;
+   font-size: 40px;
+   text-align: center;
+   line-height: 46.88px;
+}
+
+.mainQuote {
+   margin-top: 49px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   width: 100%;
+}
+
+.mainQuote_avatar {
+   margin-left: 30px;
+}
+
+.mainQuote_quote {
+   position: relative;
+   font-size: 16px;
+   line-height: 24px;
+   width: 489px;
+}
+
+.quote_author {
+   margin-top: 10px;
+   font-weight: 700;
+}
+
+.quotationMark {
+   position: absolute;
+   top: 0;
+   left: -60px;
+}
+
+.quotationMarkEnd {
+   top:auto;
+   bottom: -10px;
+   right: -20px;
+   left: auto;
+   transform: rotate(180deg);
+}
+
+.secondaryQuotes {
+   display: flex;
+   width: 100%;
+   margin-top: 134px;
+   justify-content: center;
+}
+
+.secondaryQuotesUnit {
+   width: 45%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.secondaryQuotes_quotes {
+   width: 242px;
+   height: 129px;
+}
+
+.secondaryQuote_avatar {
+   width: 100px;
+   margin-top: -10px;
+   margin-left: -10px;
+}

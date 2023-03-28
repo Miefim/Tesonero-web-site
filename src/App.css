@@ -1,3 +1,20 @@
 .App {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 1920px;
+   margin: 0 auto;
+   color: #2E3A59;
+}
 
+.content {
+   display: flex;
+   width: 100%;
+}
+
+@media screen and (max-width: 1920px) {
+   .App {
+      width: 100%;
+   }
 }
