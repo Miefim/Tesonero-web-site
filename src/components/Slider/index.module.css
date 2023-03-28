@@ -1,0 +1,66 @@
+.slider {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+   height: 250px;
+   padding: 50px 0 80px 0 
+}
+
+.win {
+   display: flex;
+   overflow: hidden;
+}
+
+.tape {
+   display: flex;
+   justify-content: start;
+   width: auto;
+   transition: .3s;
+}
+
+.unit {
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav {
+   display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+   min-width: 164px;
+}
+
+.nav_arrowLeft {
+   transform: rotate(90deg);
+   cursor: pointer;
+}
+
+.nav_arrowRight {
+   transform: rotate(-90deg);
+   cursor: pointer;
+}
+
+.noActive {
+   opacity: .3;
+}
+
+.points {
+   display: flex;
+   align-items: center;
+}
+
+.point {
+   width: 8px;
+   height: 8px;
+   background-color: #E7EBF0;
+   border-radius: 50%;
+   margin: 0 6px;
+}
+
+.activePoint {
+   background-color: #A6ABBD;
+   transition: .3s;
+}

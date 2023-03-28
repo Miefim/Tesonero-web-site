@@ -33,6 +33,10 @@
    top: -12px;
 }
 
+.logoMobile {
+   display: none;
+}
+
 .nav {
    display: flex;
    justify-content: space-between;
@@ -48,4 +52,44 @@
    color: #fff;
    top: 40%;
    right: 84px;
+}
+
+@media screen and (max-width: 1100px) {
+
+   .nav {
+      display: none;
+
+   }
+
+   .headerBtn {
+      display: none;
+   }
+
+   .header {
+      justify-content: center;
+   }
+
+   .logo {
+      margin-left: 0;
+   }
+}
+
+@media screen and (max-width: 425px) {
+
+   .logoMobile {
+      display: flex;
+   }
+
+   .logo_left {
+      display: none;
+   }
+
+   .logo_right {
+      display: none;
+   }
+
+   .logo {
+      margin-top: 22px;
+   }
+
 }

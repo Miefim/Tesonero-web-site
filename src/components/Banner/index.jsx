@@ -1,9 +1,20 @@
+import { useEffect, useState } from 'react'
 import SeparateLine from '../UI/SeparateLine'
 import style from './index.module.css'
 
-const Banner = () => {
+const Banner = ({className}) => {
+   const [parallax, setParallax] = useState(0)
+
+   useEffect(() => {
+      window.addEventListener('scroll', parallaxCalc)
+   })
+   
+   const parallaxCalc = () => {
+      setParallax(window.scrollY/7)
+   }
+
    return(
-      <div className={style.banner}>
+      <div className={`${style.banner} ${className}`}>
          <SeparateLine className={style.line}/>
          <title className={style.title}>LOREM IPSUM, DOLOR SIT AMET CONSECTETUR</title>
          <div className={style.content}>
@@ -39,6 +50,8 @@ const Banner = () => {
                </div>
             </div>
          </div>
+         <img className={style.bgLeft} src="/images/bgLeft.svg" alt="" style={{transform: `translateY(${parallax}px)`}}/>
+         <img className={style.bgRight} src="/images/bgRight.svg" alt="" style={{transform: `translateY(${parallax}px)`}}/>
       </div>
    )
 }
