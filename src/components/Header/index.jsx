@@ -12,6 +12,7 @@ const Header = () => {
                <img src='/images/logo2.svg' alt="" />
                <img className={style.logo_icon} src='/images/logo.svg' alt="" />
             </div>
+            <img className={style.logoMobile} src="/images/logoMobile.svg" alt="" />
          </div>
          <nav className={style.nav}>
             <Button>NavItem1</Button>

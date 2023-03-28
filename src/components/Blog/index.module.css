@@ -25,10 +25,11 @@
    justify-content: space-between;
    align-items: flex-start;
    width: 100%;
+   box-sizing: border-box;
 }
 
 .mainQuote_avatar {
-   margin-left: 30px;
+   margin: 0 20px 0 30px;
 }
 
 .mainQuote_quote {
@@ -80,4 +81,92 @@
    width: 100px;
    margin-top: -10px;
    margin-left: -10px;
+}
+
+@media screen and (max-width: 1360px) {
+
+   .blog { 
+      width: 100%;
+   }
+
+   .mainQuote {
+      justify-content: space-around;
+   }
+
+}
+
+@media screen and (max-width: 980px) {
+
+   .mainQuote {
+      justify-content: space-between;
+   }
+
+}
+
+@media screen and (max-width: 675px) {
+   
+   .title {
+      font-size: 24px;
+      line-height: 28.13px;
+      margin-bottom: 90px;
+   }
+
+   .blog {
+      padding: 27px 16px 36px 16px;
+   }
+
+   .mainQuote {
+      flex-direction: column;
+      align-items: center;
+      border-radius: 32px;
+      padding: 0px 16px 15px 16px;
+      box-shadow: 0 8px 16px 0 #00C36850;
+   }
+   
+   .mainQuote_avatar {
+      margin: -50px 0 25px 0;
+      width: 100px;
+   }
+
+   .mainQuote_quote {
+      text-align: center;
+      width: 100%;
+   }
+
+   .quotationMark {
+      top: -50px;
+      left: 0px;
+      bottom: auto;
+   }
+
+   .quotationMarkEnd {
+      top:-50;
+      left: auto;
+      right: 0px;
+      bottom: auto;
+   }
+
+   .quoteSvg {
+      fill:#E7EBF0
+   }
+
+   .secondaryQuotes {
+      flex-direction: column-reverse;
+      margin-top: 35px;
+   }
+
+   .secondaryQuotesUnit {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   .secondaryQuote_avatar {
+      margin: 0 15px 0 0;
+      width: 60px;
+   }
+
+   .secondaryQuotes_quotes {
+      height: auto;
+   }
+
 }

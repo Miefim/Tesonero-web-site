@@ -17,7 +17,13 @@ const DropDownBlock = () => {
             </div>
          </title>
          <div className={style.ddList}>
-            <DropDown id={'1'} visible={visible} setVisible={setVisible}>
+            <DropDown 
+               id={'1'} 
+               visible={visible} 
+               setVisible={setVisible} 
+               styleHeader={style.ddHeader} 
+               styleBody={style.ddBody}
+            >
                <div>
                   <img className={style.ddImg} src="/images/dropDownIcon1.svg" alt="" />
                   <div>
@@ -29,7 +35,13 @@ const DropDownBlock = () => {
                   suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                </div>
             </DropDown>
-            <DropDown id={'2'} visible={visible} setVisible={setVisible}>
+            <DropDown 
+               id={'2'} 
+               visible={visible} 
+               setVisible={setVisible} 
+               styleHeader={style.ddHeader} 
+               styleBody={style.ddBody}
+            >
                <div>
                   <img className={style.ddImg} src="/images/dropDownIcon2.svg" alt="" />
                   <div>
@@ -41,7 +53,13 @@ const DropDownBlock = () => {
                   suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                </div>
             </DropDown>
-            <DropDown id={'3'} visible={visible} setVisible={setVisible}>
+            <DropDown 
+               id={'3'} 
+               visible={visible} 
+               setVisible={setVisible} 
+               styleHeader={style.ddHeader} 
+               styleBody={style.ddBody}
+            >
                <div>
                   <img className={style.ddImg} src="/images/dropDownIcon3.svg" alt="" />
                   <div>
@@ -53,7 +71,13 @@ const DropDownBlock = () => {
                   suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                </div>
             </DropDown>
-            <DropDown id={'4'} visible={visible} setVisible={setVisible}>
+            <DropDown 
+               id={'4'} 
+               visible={visible} 
+               setVisible={setVisible} 
+               styleHeader={style.ddHeader} 
+               styleBody={style.ddBody}
+            >
                <div>
                   <img className={style.ddImg} src="/images/dropDownIcon4.svg" alt="" />
                   <div>
@@ -65,7 +89,14 @@ const DropDownBlock = () => {
                   suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                </div>
             </DropDown>
-            <DropDown id={'5'} visible={visible} setVisible={setVisible}>
+            <DropDown 
+               id={'5'} 
+               visible={visible} 
+               setVisible={setVisible} 
+               styleHeader={style.ddHeader} 
+               styleBody={style.ddBody} 
+               className={style.lastdd}
+            >
                <div>
                   <img className={style.ddImg} src="/images/dropDownIcon5.svg" alt="" />
                   <div>
