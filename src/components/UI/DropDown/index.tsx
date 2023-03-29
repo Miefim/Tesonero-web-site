@@ -1,6 +1,16 @@
 import style from './index.module.css'
 
-const DropDown = ({children, className, visible, setVisible, id, styleHeader, styleBody, ...props}) => {
+type DropDownProps = {
+   children: JSX.Element[],
+   className?: string,
+   visible: string | null,
+   setVisible: (arg: string | null) => void,
+   id: string,
+   styleHeader?: string,
+   styleBody?: string,
+}
+
+const DropDown: React.FC<DropDownProps> = ({children, className, visible, setVisible, id, styleHeader, styleBody, ...props}) => {
    return(
       <div 
          className={`${style.dd} ${className}`} 

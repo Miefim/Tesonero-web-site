@@ -4,8 +4,8 @@ import DropDown from '../UI/DropDown'
 import SeparateLine from '../UI/SeparateLine'
 import style from './index.module.css'
 
-const DropDownBlock = () => {
-   const [visible, setVisible] = useState(null)
+const DropDownBlock: React.FC = () => {
+   const [visible, setVisible] = useState<string | null>(null)
    return(
       <div className={style.ddBlock}>
          <SeparateLine className={style.line}/>
