@@ -57,6 +57,12 @@
    text-align: center;
    color: #2E3A59;
    height: 151px;
+   z-index: 10;
+}
+
+.iconHover:hover :nth-child(n) {
+   stroke: #03c368;
+   transition: .3s;
 }
 
 .content_center {

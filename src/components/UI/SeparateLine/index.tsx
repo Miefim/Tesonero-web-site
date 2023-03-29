@@ -1,6 +1,10 @@
 import style from './index.module.css'
 
-const SeparateLine = ({className}) => {
+type SeparateLineProps = {
+   className?: string
+}
+
+const SeparateLine: React.FC<SeparateLineProps> = ({className}) => {
    return(
       <div className={`${style.separateLine} ${className}`}></div>
    )

@@ -1,10 +1,28 @@
 import { useEffect, useState } from "react"
 
-export const useSlider = ({maxIndex = 0, infinity = false, unitWidth, numberUnitsScreen = 1}) => {
-   const [count, setCount] = useState(0)
-   const [transformTape, setTransformTape] = useState(0)
-   const [xStart, setXStart] = useState(null)
-   const [isMove, setIsMove] = useState(false)  
+type IUseSlider = (arg: {
+   maxIndex?: number,
+   infinity?: boolean,
+   unitWidth: number,
+   numberUnitsScreen?: number
+}) => [
+   number, 
+   number, 
+   React.MouseEventHandler<HTMLDivElement>, 
+   React.MouseEventHandler<HTMLImageElement>, 
+   React.Dispatch<React.SetStateAction<number>>, 
+   React.TouchEventHandler<HTMLDivElement> & React.MouseEventHandler<HTMLDivElement>, 
+   React.MouseEventHandler<HTMLDivElement> & React.TouchEventHandler<HTMLDivElement>, 
+   React.MouseEventHandler<HTMLDivElement> & React.TouchEventHandler<HTMLDivElement>, 
+   React.MouseEventHandler<HTMLDivElement>
+]
+
+
+export const useSlider: IUseSlider = ({maxIndex = 0, infinity = false, unitWidth, numberUnitsScreen = 1}) => {
+   const [count, setCount] = useState<number>(0)
+   const [transformTape, setTransformTape] = useState<number>(0)
+   const [xStart, setXStart] = useState<number | null>(null)
+   const [isMove, setIsMove] = useState<boolean>(false)  
 
    useEffect(() => {
       if(count < 0){
@@ -35,27 +53,27 @@ export const useSlider = ({maxIndex = 0, infinity = false, unitWidth, numberUnit
          setCount(maxIndex)
       }
    }
-
-   const start = (e) => {
+   
+   const start = (e: React.TouchEvent<HTMLDivElement> & React.MouseEvent<HTMLDivElement>) => {
       if(e.type !== "touchstart"){
          e.preventDefault()
       } 
-      const xStart = e.type === "touchstart"? e.touches[0].clientX : e.clientX 
+      const xStart = e.type === "touchstart" ? e.touches[0].clientX : e.clientX 
       setXStart(xStart)
       setIsMove(true)
       e.currentTarget.style.transition = "0s"
    }
 
-   const move = (e) => {
+   const move = (e: React.MouseEvent<HTMLDivElement> & React.TouchEvent<HTMLDivElement>) => {
       if(isMove){
          const xMove = e.type === "touchmove"? e.touches[0].clientX : e.clientX
          setTransformTape(-transformTape - xMove)
       }
    }
 
-   const end = (e) => {
+   const end = (e: React.MouseEvent<HTMLDivElement> & React.TouchEvent<HTMLDivElement>) => {
       const xEnd = e.type === "touchend"? e.changedTouches[0].clientX : e.clientX
-      const differenceX = xStart - xEnd
+      const differenceX = xStart ? xStart - xEnd : 0
       e.currentTarget.style.transition = "0.3s"
       setIsMove(false)
       if(Math.abs(differenceX) > 100){
@@ -72,7 +90,7 @@ export const useSlider = ({maxIndex = 0, infinity = false, unitWidth, numberUnit
 
    }
 
-   const cancelTransform = (e) => {
+   const cancelTransform = (e: React.MouseEvent<HTMLDivElement>) => {
       e.currentTarget.style.transition = "0.3s"
       setIsMove(false)
       setTransformTape(count * (unitWidth * numberUnitsScreen))

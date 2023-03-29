@@ -1,6 +1,11 @@
 import style from './index.module.css'
 
-const Button = ({children, className}) => {
+type ButtonProps = {
+   children: JSX.Element | string,
+   className?: string
+}
+
+const Button: React.FC<ButtonProps> = ({children, className}) => {
    return(
       <button className={`${style.button} ${className}`}>{children}</button>
    )

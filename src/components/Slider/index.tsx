@@ -3,13 +3,17 @@ import { useRef } from 'react'
 import { useSlider } from '../../hooks/useSlider'
 import style from './index.module.css'
 
-const Slider = ({children}) => {
-   const unitRef = useRef()
+type SliderProps = {
+   children: JSX.Element[]
+}
+
+const Slider: React.FC<SliderProps> = ({children}) => {
+   const unitRef = useRef<HTMLDivElement>(null)
    const maxIndex = children.length - 1
-   const unitWidth = unitRef.current?.clientWidth
+   const unitWidth = unitRef?.current?.clientWidth ? unitRef.current.clientWidth : 0
 
    const [index, transformTape, increment, decrement, setIndex, start, move, end, cancelTransform] = useSlider({maxIndex, unitWidth})
-   
+  
    return(
       <div className={style.slider}>
          <div className={style.win}>
@@ -42,7 +46,11 @@ const Slider = ({children}) => {
             <div className={style.points}>
                {
                   children.map((_, i) => 
-                     <div className={`${style.point} ${index === i && style.activePoint}`} key={i}></div>
+                     <div 
+                        className={`${style.point} ${index === i && style.activePoint}`} 
+                        key={i}
+                        onClick={() => setIndex(i)}
+                     />
                   )
                }
             </div>

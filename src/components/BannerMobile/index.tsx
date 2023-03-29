@@ -1,7 +1,11 @@
 import Slider from '../Slider'
 import style from './index.module.css'
 
-const BannerMobile = ({className}) => {
+type BannerProps = {
+   className: string
+}
+
+const BannerMobile: React.FC<BannerProps> = ({className}) => {
    return (
       <div className={`${style.bannerMobile} ${className}`}>
          <div className={style.mainImgBlock}>

@@ -1,7 +1,7 @@
 import Button from '../UI/Button'
 import style from './index.module.css'
 
-const Header = () => {
+const Header: React.FC = () => {
    return(
       <header className={style.header}>
          <div className={style.logo}>
